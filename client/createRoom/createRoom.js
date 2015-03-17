@@ -7,7 +7,7 @@ Template.createRoom.events({
     'submit .new-room': function(event) {
         var text = event.target.text.value;
         Rooms.insert({
-            text: text,
+            name: text,
             createdAt: new Date()
         });
         // Clear form

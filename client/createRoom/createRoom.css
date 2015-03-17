@@ -1,0 +1,46 @@
+.create-room {
+    position: absolute;
+    top: 150%;
+    left: 25%;
+    width: 50%;
+    padding: 10%;
+    background-color: lightgoldenrodyellow;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+.create-room-visible {
+    top: 30%;
+}
+
+.new-room {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    position: relative;
+}
+
+.new-room h4 {
+    font-weight: 500;
+}
+
+.new-room input {
+    box-sizing: border-box;
+    padding: 10px 5px;
+    background: white;
+    border: none;
+    width: 240px;
+    font-size: 1em;
+}
+
+.new-room input:focus{
+    outline: 0;
+}
+
+.new-room button {
+    width: 110px;
+    margin-top: 15px;
+    margin-right: 15px;
+    background: white;
+    color: orange;
+    border: 1px solid orange;
+    font-size: 1em;
+}
