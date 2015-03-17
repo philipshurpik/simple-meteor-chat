@@ -6,15 +6,28 @@
 <div class="container">
     <header>
         <h1>Chat rooms</h1>
+        <h1 class="header-new-room">+</h1>
     </header>
     <ul>
         {{#each rooms}}
-            {{> room}}
+            {{> roomItem}}
         {{/each}}
     </ul>
+
+    {{>createRoom}}
 </div>
 </body>
 
-<template name="room">
+<template name="roomItem">
     <li>{{text}}</li>
+</template>
+
+<template name="createRoom">
+    <div class="create-room {{isCreateRoomVisible}}">
+        Create new room
+        <form class="new-room">
+            <input type="text" name="text" placeholder="Type to add new room" />
+            <button type="submit">Create</button>
+        </form>
+    </div>
 </template>
