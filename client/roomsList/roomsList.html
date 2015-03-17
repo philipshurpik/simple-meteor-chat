@@ -1,0 +1,11 @@
+<template name="roomsList">
+    <header>
+        <h1>Chat rooms</h1>
+        <h1 class="header-new-room">+</h1>
+    </header>
+    <ul>
+        {{#each rooms}}
+            {{> roomItem}}
+        {{/each}}
+    </ul>
+</template>
