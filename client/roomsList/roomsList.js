@@ -9,3 +9,7 @@ Template.roomsList.events({
         Session.set('isCreateRoomVisible', true);
     }
 });
+
+Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+});

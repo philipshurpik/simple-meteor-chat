@@ -25,7 +25,9 @@ Template.room.events({
             Messages.insert({
                 text: text,
                 createdAt: new Date(),
-                roomId: activeRoom._id
+                roomId: activeRoom._id,
+                author: Meteor.userId(),
+                username: Meteor.user() ? Meteor.user().username : ""
             });
         }
         event.target.text.value = "";
