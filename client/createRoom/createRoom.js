@@ -15,5 +15,10 @@ Template.createRoom.events({
         Session.set('isCreateRoomVisible', false);
         // Prevent default form submit
         return false;
+    },
+    'reset .new-room': function(event) {
+        event.target.text.value = "";
+        Session.set('isCreateRoomVisible', false);
+        return false;
     }
 });

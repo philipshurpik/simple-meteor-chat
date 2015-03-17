@@ -75,33 +75,37 @@ form {
     position: relative;
 }
 
-.new-task input {
+.new-room h4 {
+    font-weight: 500;
+}
+
+.new-room input {
     box-sizing: border-box;
-    padding: 10px 0;
-    background: transparent;
+    padding: 10px 5px;
+    background: white;
     border: none;
-    width: 100%;
-    padding-right: 80px;
+    width: 240px;
     font-size: 1em;
 }
 
-.new-task input:focus{
+.new-room input:focus{
     outline: 0;
+}
+
+.new-room button {
+    width: 110px;
+    margin-top: 15px;
+    margin-right: 15px;
+    background: white;
+    color: orange;
+    border: 1px solid orange;
+    font-size: 1em;
 }
 
 ul {
     margin: 0;
     padding: 0;
     background: white;
-}
-
-.delete {
-    float: right;
-    font-weight: bold;
-    background: none;
-    font-size: 1em;
-    border: none;
-    position: relative;
 }
 
 li {
@@ -111,42 +115,8 @@ li {
     border-bottom: #eee solid 1px;
 }
 
-li .text {
-    margin-left: 10px;
-}
-
-li.checked {
-    color: #888;
-}
-
-li.checked .text {
-    text-decoration: line-through;
-}
-
-li.private {
-    background: #eee;
-    border-color: #ddd;
-}
-
-header .hide-completed {
-    float: right;
-}
-
-.toggle-private {
-    margin-left: 5px;
-}
-
 @media (max-width: 600px) {
     li {
         padding: 12px 15px;
-    }
-
-    .search {
-        width: 150px;
-        clear: both;
-    }
-
-    .new-task input {
-        padding-bottom: 5px;
     }
 }
