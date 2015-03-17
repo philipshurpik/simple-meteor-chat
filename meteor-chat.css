@@ -50,6 +50,12 @@ header {
 .create-room-visible {
     top: 30%;
 }
+.room-item-delete {
+    float: right;
+    padding: 0 31px 10px;
+    cursor: pointer;
+    color: darkred;
+}
 
 #login-buttons {
     display: block;
