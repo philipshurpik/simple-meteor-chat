@@ -6,10 +6,12 @@ Template.createRoom.helpers({
 Template.createRoom.events({
     'submit .new-room': function(event) {
         var text = event.target.text.value;
-        Rooms.insert({
-            name: text,
-            createdAt: new Date()
-        });
+        if (text.trim() !== "") {
+            Rooms.insert({
+                name: text,
+                createdAt: new Date()
+            });
+        }
         // Clear form
         event.target.text.value = "";
         Session.set('isCreateRoomVisible', false);
