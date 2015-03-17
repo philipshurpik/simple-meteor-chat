@@ -5,7 +5,9 @@
             <h1 class="header-close-room">Close</h1>
         </header>
         <ul>
-
+            {{#each roomMessages}}
+                {{> roomMessage}}
+            {{/each}}
         </ul>
         <form class="room-new-message">
             <input type="text" name="text" placeholder="Message text" />

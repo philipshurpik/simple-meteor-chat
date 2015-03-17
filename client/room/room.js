@@ -5,6 +5,12 @@ Template.room.helpers({
     name: function() {
         var activeRoom = Session.get('activeRoom');
         return activeRoom.name;
+    },
+    roomMessages: function () {
+        var activeRoom = Session.get('activeRoom');
+        return Messages.find({
+            roomId: activeRoom._id
+        });
     }
 });
 
@@ -18,11 +24,11 @@ Template.room.events({
         if (text.trim() !== "") {
             Messages.insert({
                 text: text,
-                createdAt: new Date()
+                createdAt: new Date(),
+                roomId: activeRoom._id
             });
         }
         event.target.text.value = "";
-        Session.set('isRoomVisible', false);
         return false;
     }
 });
